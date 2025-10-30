@@ -4,7 +4,8 @@ girlfriend. You ignore her and continue on with the show, with tears in your eye
 you out the house, so you better find a perfect girlfriend who will be your sugar mommy. This
 game will guide you through your life, and it will teach you the cost benefit analysis of
 various options and teach you several life lessons along the way.
-
+IMPORTANT: The options will have the valid options in the parenthesis, type one of them
+precisely. If you type in something unkown, it will default to the second option.
 
 Title
  - Play, Help, Exit
@@ -31,4 +32,13 @@ Scenes
     - secret 2 - uncover the mysteries of the Love Island
 
 Girls
- 1.
+ 1. Lana - partying
+ 2. Suzie - playing soccer -
+ 3. Rudy - playing basketball - Notre Dame
+ 4. Esmeralda - smoking
+ 5. Leia - sword fighting
+ 6. Patricia - playing hockey
+ 7. Samantha - playing basketball
+    - combination of miller and edmonds
+ 8. Layla - fencing
+    - Jax Torres ex

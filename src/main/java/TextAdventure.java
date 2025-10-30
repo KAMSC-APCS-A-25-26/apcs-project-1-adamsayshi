@@ -73,6 +73,7 @@ public class TextAdventure {
         Scene2();
     }
     public static void Scene2()throws Exception{
+        //Get the scanner
         Scanner sc = new Scanner(System.in); Thread.sleep(1000);
         System.out.println(" ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓████████▓▒░      ░▒▓███████▓▒░  \n" +
                 "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░ \n" +
@@ -83,9 +84,20 @@ public class TextAdventure {
                 "░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░      ░▒▓████████▓▒░ \n" +
                 "                                                                                       \n" +
                 "                                                                                       "); Thread.sleep(1500);
+        //Scene 2 dialog
         System.out.println("You wake up, hung over with mud stains"); Thread.sleep(1500);
         System.out.println("You see someone come up to you"); Thread.sleep(1500);
         System.out.println("You can't see his face as he stands over you because of the sun");Thread.sleep(1500);
-
+        System.out.println("He stuck out both his hands, seemingly holding bread and a lottery ticket");Thread.sleep(1500);
+        System.out.print("Do you grab the bread or the lottery ticket? (bread/ticket):  ");
+        //User decides this, which leads to future decisions
+        Globals.lottery = !sc.nextLine().equals("bread");
+        if(Globals.lottery){System.out.println("Right when you grab the ticket, he hands you a coin to scratch"); Thread.sleep(1500);
+            System.out.println("You scratch it off"); Thread.sleep(2000); System.out.println("You get nothing"); Thread.sleep(1500);
+            System.out.println("Your stomach starts to rumble, so you ask if you can have the bread");Thread.sleep(1500);
+            System.out.println("He starts to hand you the bread, but stops at the last seconds and throws it on the ground");Thread.sleep(1500);
+            System.out.println("You try reaching for it, but he stomped on it and destroyed it");Thread.sleep(1500);
+        }
+        System.out.println("He leaves without saying any words");Thread.sleep(1500);
     }
 }
