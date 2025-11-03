@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.io.File;
+import java.util.Arrays;
 public class TextAdventure {
     public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
@@ -107,6 +108,8 @@ public class TextAdventure {
     }
     public static void Scene3() throws Exception{
         Scanner sc = new Scanner(System.in);
+        Boolean heads;
+        int x = Globals.sleepTime;
         //Scene 3
         System.out.println(" ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓████████▓▒░      ░▒▓███████▓▒░  \n" +
                 "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░ \n" +
@@ -116,18 +119,75 @@ public class TextAdventure {
                 "       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░ \n" +
                 "░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░      ░▒▓███████▓▒░  \n" +
                 "                                                                                       \n" +
-                "                                                                                       ");Thread.sleep(2000);
-        System.out.println("You wake up in a bus");Thread.sleep(1500);
-        System.out.println("\"You're finally awake, you missed half the ride\" - ?");Thread.sleep(1500);
-        System.out.println("\"Who are you?\" - " + Globals.name); Thread.sleep(1500);
-        System.out.println("\"I am Michael\" - Michael"); Thread.sleep(1500);
-        System.out.println("\"Hello Michael\" - " + Globals.name); Thread.sleep(1500);
+                "                                                                                       ");Thread.sleep(x);
+        System.out.println("You wake up in a bus");Thread.sleep(x);
+        System.out.println("\"You're finally awake, you missed half the ride\" - ?");Thread.sleep(x);
+        System.out.println("\"Who are you?\" - " + Globals.name); Thread.sleep(x);
+        System.out.println("\"I am Michael\" - Michael"); Thread.sleep(x);
+        System.out.println("\"Hello Michael\" - " + Globals.name); Thread.sleep(x);
         System.out.println("\"Where are we? What am I doing here?\" - " + Globals.name);
-        System.out.println("\"You will either win lots of money, or lose everything\" - Michael");Thread.sleep(3000);
-        System.out.println("\"Do you want to gamble what you have left?\" - Michael");
-        System.out.print("Would you like to gamble your life savings? (yes/no): ");
-        Globals.gamble = !sc.nextLine().equals("no");
+        System.out.println("\"You will either win lots of money, or lose everything\" - Michael");Thread.sleep(x);
+        System.out.println("\"Do you want to gamble what you have left?\" - Michael");Thread.sleep(x);
+        System.out.print("Would you like to gamble your life savings? (yes/no): ");Thread.sleep(x);
+        Globals.gamble = sc.nextLine().equals("yes");
         if(Globals.gamble){
+            System.out.println("He pulls out a coin from his pocket and flips it");Thread.sleep(x);
+            System.out.println("Do you call out heads or tails? (heads/tails): ");
+            heads = sc.nextLine().equals("heads");
+            System.out.print(".");Thread.sleep(x/3);System.out.print(".");Thread.sleep(x/3);System.out.println(".");Thread.sleep(x);
+            System.out.print("The coin lands on ");
+            if(heads){
+                System.out.println("tails");
+            } else{
+                System.out.println("heads");
+            }
+            System.out.println("You lost");Thread.sleep(x);
+            System.out.println("You realize how bad it's going for you");Thread.sleep(x);
+            System.out.println("However, maybe you will earn everything back and more from Love Island");Thread.sleep(x);
+        } else{
+            System.out.println("\"You're no fun\" - Michael");Thread.sleep(x);
+        }
+        System.out.println("You continue on your way, watching the window");Thread.sleep(x);
+        System.out.println("You notice you are in a heavily wooded area");Thread.sleep(x);
+        System.out.println("You find a paper on the floor");Thread.sleep(x);
+        System.out.println("You decide to read it, but it's incredibly smeared");Thread.sleep(x);
+        System.out.println(" ██░ ██ ▓█████  ██▓     ██▓███  \n" +
+                "▓██░ ██▒▓█   ▀ ▓██▒    ▓██░  ██▒\n" +
+                "▒██▀▀██░▒███   ▒██░    ▓██░ ██▓▒\n" +
+                "░▓█ ░██ ▒▓█  ▄ ▒██░    ▒██▄█▓▒ ▒\n" +
+                "░▓█▒░██▓░▒████▒░██████▒▒██▒ ░  ░\n" +
+                " ▒ ░░▒░▒░░ ▒░ ░░ ▒░▓  ░▒▓▒░ ░  ░\n" +
+                " ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░▒ ░     \n" +
+                " ░  ░░ ░   ░     ░ ░   ░░       \n" +
+                " ░  ░  ░   ░  ░    ░  ░         \n" +
+                "                                ");Thread.sleep(x);
+        System.out.println("You decide to keep quiet, because who knows what will happen");Thread.sleep(x);
+        System.out.println("You keep looking out the window");Thread.sleep(x);
+        Scene4();
+    }
+    public static void Scene4() throws Exception{
+        Scanner sc = new Scanner(System.in);
+        int x = Globals.sleepTime;
+        System.out.println(" ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓████████▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \n" +
+                "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ \n" +
+                "░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ \n" +
+                " ░▒▓██████▓▒░░▒▓█▓▒░      ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░        ░▒▓████████▓▒░ \n" +
+                "       ░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░ \n" +
+                "       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░ \n" +
+                "░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░             ░▒▓█▓▒░ \n" +
+                "                                                                                       \n" +
+                "                                                                                       ");Thread.sleep(x);
+        System.out.println("You find yourself in a beautiful house, with a really nice pool, just like a movie");Thread.sleep(x);
+        System.out.println("There are 8 girls lined up in front of you");Thread.sleep(x);
+        System.out.println("They introduce themselves");Thread.sleep(x);
+        for(int i = 0; i < Globals.girls.length; i++){
+            System.out.println("Hello, I'm " + Globals.girls[i] + " and I like " + Globals.hobbies[i]);
+            System.out.println("You rate her a " + Globals.rating[i] + " out of 10");
+        }
+        System.out.println("\"The first choice is hard\" - Narrator");
+        System.out.println("\"Who do you decide to kick out?\" - Narrator");
+        for(int i = 0; i < Globals.girls.length/2; i++){
+            System.out.print("Who is person number " + i + " that you want to kick out?: ");
 
         }
     }

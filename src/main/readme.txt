@@ -5,7 +5,7 @@ you out the house, so you better find a perfect girlfriend who will be your suga
 game will guide you through your life, and it will teach you the cost benefit analysis of
 various options and teach you several life lessons along the way.
 IMPORTANT: The options will have the valid options in the parenthesis, type one of them
-precisely. If you type in something unkown, it will default to the second option.
+precisely. If you type in something unknown, it will default to the second option.
 
 Title
  - Play, Help, Exit
