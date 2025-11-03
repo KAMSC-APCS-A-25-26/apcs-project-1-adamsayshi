@@ -38,7 +38,7 @@ Girls
  4. Esmeralda - smoking
  5. Leia - sword fighting
  6. Patricia - playing hockey
- 7. Samantha - playing basketball
+ 7. Samantha - playing basketball and soccer
     - combination of miller and edmonds
  8. Layla - fencing
     - Jax Torres ex
