@@ -268,7 +268,12 @@ public class TextAdventure {
             System.out.println(String.join(", ", Globals.girls));
             Thread.sleep(x);
             System.out.print("Who is person number " + (i + 1) + " that you want to kick out?(type in the name): ");
-            int spot = Globals.girls.indexOf(sc.nextLine());
+            String girlStuff = sc.nextLine();
+            while(!Globals.girls.contains(girlStuff)){
+                System.out.print("Sorry, that girl is not in the list, type it again: ");
+                girlStuff = sc.nextLine();
+            }
+            int spot = Globals.girls.indexOf(girlStuff);
             Globals.girls.remove(spot);
             Globals.hobbies.remove(spot);
             Globals.rating.remove(spot);
@@ -427,7 +432,12 @@ public class TextAdventure {
             System.out.println(String.join(", ", Globals.girls));
             Thread.sleep(x);
             System.out.print("Who is person number " + (i + 1) + " that you want to kick out?(type in the name): ");
-            int spot2 = Globals.girls.indexOf(sc.nextLine());
+            String girlStuff = sc.nextLine();
+            while(!Globals.girls.contains(girlStuff)){
+                System.out.print("Sorry, that girl is not in the list, type it again: ");
+                girlStuff = sc.nextLine();
+            }
+            int spot2 = Globals.girls.indexOf(girlStuff);
             Globals.girls.remove(spot2);
             Globals.hobbies.remove(spot2);
             Globals.rating.remove(spot2);
@@ -472,7 +482,12 @@ public class TextAdventure {
             System.out.println(String.join(", ", Globals.girls));
             Thread.sleep(x);
             System.out.print("Who is person number " + (i + 1) + " that you want to kick out?(type in the name): ");
-            int spot = Globals.girls.indexOf(sc.nextLine());
+            String girlStuff = sc.nextLine();
+            while(!Globals.girls.contains(girlStuff)){
+                System.out.print("Sorry, that girl is not in the list, type it again: ");
+                girlStuff = sc.nextLine();
+            }
+            int spot = Globals.girls.indexOf(girlStuff);
             Globals.girls.remove(spot);
             Globals.hobbies.remove(spot);
             Globals.rating.remove(spot);
