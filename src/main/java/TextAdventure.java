@@ -94,6 +94,7 @@ public class TextAdventure {
         Thread.sleep(x);
         System.out.println("You start to pack up and leave");
         Thread.sleep(x);
+        //Move onto next scene
         Scene2();
     }
 
@@ -123,6 +124,7 @@ public class TextAdventure {
         System.out.print("Do you grab the bread or the lottery ticket? (bread/ticket):  ");
         // User decides this, which leads to future decisions
         Globals.lottery = !sc.nextLine().equals("bread");
+        //Big decision later on
         if (Globals.lottery) {
             System.out.println("Right when you grab the ticket, he hands you a coin to scratch");
             Thread.sleep(x);
@@ -144,6 +146,7 @@ public class TextAdventure {
         Thread.sleep(x);
         System.out.println("Before you can say anything, he knocks you out...");
         Thread.sleep(x);
+        //Move onto next scene
         Scene3();
     }
 
@@ -173,6 +176,7 @@ public class TextAdventure {
         System.out.println("\"Hello Michael\" - " + Globals.name);
         Thread.sleep(x);
         System.out.println("\"Where are we? What am I doing here?\" - " + Globals.name);
+        Thread.sleep(x);
         System.out.println("\"You will either win lots of money, or lose everything\" - Michael");
         Thread.sleep(x);
         System.out.println("\"Do you want to gamble what you have left?\" - Michael");
@@ -180,6 +184,7 @@ public class TextAdventure {
         System.out.print("Would you like to gamble your life savings? (yes/no): ");
         Thread.sleep(x);
         Globals.gamble = sc.nextLine().equals("yes");
+        //Big decision later on
         if (Globals.gamble) {
             System.out.println("He pulls out a coin from his pocket and flips it");
             Thread.sleep(x);
@@ -192,11 +197,13 @@ public class TextAdventure {
             System.out.println(".");
             Thread.sleep(x);
             System.out.print("The coin lands on ");
+            //Make user always lose
             if (heads) {
                 System.out.println("tails");
             } else {
                 System.out.println("heads");
             }
+            Thread.sleep(x);
             System.out.println("You lost");
             Thread.sleep(x);
             System.out.println("You realize how bad it's going for you");
@@ -236,6 +243,7 @@ public class TextAdventure {
     public static void Scene4() throws Exception {
         Scanner sc = new Scanner(System.in);
         int x = Globals.sleepTime;
+        //Scene 4
         System.out.println(" ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓████████▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \n" +
                 "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ \n" +
                 "░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ \n" +
@@ -269,6 +277,7 @@ public class TextAdventure {
             Thread.sleep(x);
             System.out.print("Who is person number " + (i + 1) + " that you want to kick out?(type in the name): ");
             String girlStuff = sc.nextLine();
+            //Check girls
             while(!Globals.girls.contains(girlStuff)){
                 System.out.print("Sorry, that girl is not in the list, type it again: ");
                 girlStuff = sc.nextLine();
@@ -278,6 +287,7 @@ public class TextAdventure {
             Globals.hobbies.remove(spot);
             Globals.rating.remove(spot);
         }
+        //Move on to next scene
         if (Globals.testing) {
             return;
         } else {
@@ -311,9 +321,11 @@ public class TextAdventure {
         System.out.print("What color clothes do you decide to wear?: ");
         Globals.clothes = sc.nextLine();
         System.out.println("Do you want to eat a quick snack before bed? (yes/no): ");
+        //Little eating scene
         Boolean eating = sc.nextLine().equals("yes");
         if (eating) {
             System.out.println("You eat a little hamburger");
+            Thread.sleep(x);
         }
         System.out.println("You head off to bed");
         if (Globals.testing) {
@@ -346,12 +358,19 @@ public class TextAdventure {
         System.out.println("\"You may choose one of them to play a game with\" - Narrator");
         Thread.sleep(x);
         System.out.println("Who do you choose?: ");
-        int spot = Globals.girls.indexOf(sc.nextLine());
+        String girlStuff = sc.nextLine();
+        //Check if girl is in the thing
+        while(!Globals.girls.contains(girlStuff)){
+            System.out.print("Sorry, that girl is not in the list, type it again: ");
+            girlStuff = sc.nextLine();
+        }
+        int spot = Globals.girls.indexOf(girlStuff);
         String contestant = Globals.girls.get(spot);
         System.out.println("\"So you chose " + contestant + "! - Narrator");
         Thread.sleep(x);
         System.out.println("\"You will play a number guessing game, and whoever guesses first, will win!\" - Narrator");
         Thread.sleep(x);
+        //Beginning of secret ending
         if (contestant.equals("Samantha")) {
             System.out.println("As you look deeply into Samantha's eyes, you notice how beautiful she is");
             System.out.println("She notices you looking and quickly looks away");
@@ -374,7 +393,7 @@ public class TextAdventure {
         Thread.sleep(x);
         System.out.println("\"" + contestant + " will begin by guessing your number between 1-5!\" - Narrator");
         Thread.sleep(x);
-        
+        //initialize points
         int userPoints = 0;
         int contPoints = 0;
         //Minigame
@@ -383,27 +402,30 @@ public class TextAdventure {
             int userStay = sc.nextInt();
             int contRandom = rand.nextInt(4) + 1;
             System.out.println(Globals.name + " has chosen " + userStay + " and " + contestant + " has chosen " + contRandom);
-            Thread.sleep(x);
+            Thread.sleep(x/2);
+            //Check if girl scored
             if (userStay == contRandom) {
                 System.out.println("\"Looks like " + contestant + " has won this round! One point!\" - Narrator");
-                Thread.sleep(x);
+                Thread.sleep(x/2);
                 contPoints++;
             } else {
                 System.out.println("Looks like " + contestant + " was off!\" - Narrator");
-                Thread.sleep(x);
+                Thread.sleep(x/2);
             }
             System.out.print("What number do you decide to choose: ");
             int userAttack = sc.nextInt();
             int contDef = rand.nextInt(4) + 1;
             System.out.println(Globals.name + " has chosen " + userAttack + " and " + contestant + " has chosen " + contDef);
+            //Check if user scored
             if (userAttack == contDef) {
                 System.out.println("\"Looks like " + Globals.name + " has won this round! One point!\" - Narrator");
-                Thread.sleep(x);
+                Thread.sleep(x/2);
                 userPoints++;
             } else {
                 System.out.println("Looks like " + Globals.name + " was off!\" - Narrator");
-                Thread.sleep(x);
+                Thread.sleep(x/2);
             }
+            //Decide who wins the game
             if(userPoints < 3 && contPoints < 3){
                 System.out.println("We will keep going until one of you has reached 3 points!");
                 System.out.println(Globals.name + ": " + userPoints);
@@ -427,6 +449,7 @@ public class TextAdventure {
         System.out.println("\"You must kick out 2 more contestants\" - Narrator");
         Thread.sleep(x);
         sc.nextLine();
+        //Kick out girls
         for (int i = 0; i < 2; i++) {
             System.out.print("Your options to kick out are: ");
             System.out.println(String.join(", ", Globals.girls));
@@ -442,6 +465,7 @@ public class TextAdventure {
             Globals.hobbies.remove(spot2);
             Globals.rating.remove(spot2);
         }
+        //Move on to next scene
         if (Globals.testing) {
             return;
         } else {
@@ -451,6 +475,7 @@ public class TextAdventure {
     public static void Scene7() throws Exception{
         Scanner sc = new Scanner(System.in);
         int x = Globals.sleepTime;
+        //Scene 7
         System.out.println(" ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓████████▓▒░      ░▒▓████████▓▒░ \r\n" + //
                         "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ \r\n" + //
                         "░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░ \r\n" + //
@@ -463,6 +488,7 @@ public class TextAdventure {
         Thread.sleep(x);
         System.out.println("Its a new day, and you are ready to choose between the last two contestants");
         Thread.sleep(x);
+        //Choose date
         System.out.println("You will go on a date with each of them today");
         String cont1 = Globals.girls.get(0);
         String cont2 = Globals.girls.get(1);
@@ -477,6 +503,7 @@ public class TextAdventure {
         Thread.sleep(x);
         System.out.println("\"Now that you have talked to both, who will you keep?\" - Narrator");
         Thread.sleep(x);
+        //Kick girls out
         for (int i = 0; i < 1; i++) {
             System.out.print("Your options to kick out are: ");
             System.out.println(String.join(", ", Globals.girls));
@@ -495,6 +522,7 @@ public class TextAdventure {
         System.out.println("You decide to choose " + Globals.girls.get(0));
         Thread.sleep(x);
         System.out.println("You travel home with her");
+        //Move on to next scene
         if (Globals.testing) {
             return;
         } else {
@@ -503,7 +531,7 @@ public class TextAdventure {
     }
     public static void Scene8()throws Exception{
         int x = Globals.sleepTime;
-        //Scene 8
+        //Scene 8 - final
         System.out.println(" ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓████████▓▒░       ░▒▓██████▓▒░  \r\n" + //
                         "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ \r\n" + //
                         "░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ \r\n" + //
@@ -534,6 +562,16 @@ public class TextAdventure {
             System.out.println("Not only did your mom not come back, but your love left you too");
             Thread.sleep(x);
             System.out.println("No thank you for playing freaking gambler");
+        }
+        //Sort of secret
+        if(Globals.girls.get(0).equals("Samantha")){
+            System.out.println("You thought it was over? Even when you chose Samantha?");
+            Thread.sleep(x);
+            System.out.println("With Samantha as your wife, she forces you to do many things against your consent");
+            Thread.sleep(x);
+            System.out.println("She tells you about the secrets of Love Island");
+            Thread.sleep(x);
+            System.out.println("Stay tuned for part 2 to reveal the secrets!!");
         }
     }
 }
