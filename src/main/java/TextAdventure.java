@@ -455,12 +455,12 @@ public class TextAdventure {
             System.out.println(String.join(", ", Globals.girls));
             Thread.sleep(x);
             System.out.print("Who is person number " + (i + 1) + " that you want to kick out?(type in the name): ");
-            String girlStuff = sc.nextLine();
-            while(!Globals.girls.contains(girlStuff)){
+            String girlStuff2 = sc.nextLine();
+            while(!Globals.girls.contains(girlStuff2)){
                 System.out.print("Sorry, that girl is not in the list, type it again: ");
                 girlStuff = sc.nextLine();
             }
-            int spot2 = Globals.girls.indexOf(girlStuff);
+            int spot2 = Globals.girls.indexOf(girlStuff2);
             Globals.girls.remove(spot2);
             Globals.hobbies.remove(spot2);
             Globals.rating.remove(spot2);
