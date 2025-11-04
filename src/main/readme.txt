@@ -28,8 +28,6 @@ Scenes
       - Live on the Streets and die
     - good ending - Girl stays and you live happily ever after
       - mom comes back, choose between dog and cat, choose if you want to run love island
-    - secret 1 - get all the girls
-    - secret 2 - uncover the mysteries of the Love Island
 
 Girls
  1. Lana - partying
