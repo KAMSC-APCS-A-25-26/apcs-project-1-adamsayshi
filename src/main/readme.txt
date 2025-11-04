@@ -6,7 +6,7 @@ game will guide you through your life, and it will teach you the cost benefit an
 various options and teach you several life lessons along the way.
 IMPORTANT: The options will have the valid options in the parenthesis, type one of them
 precisely. If you type in something unknown, it will default to the second option.
-
+IMPORTANT2: Don't type it early, or else it will break. Only type when the game tells you to!
 Title
  - Play, Help, Exit
 Setting
@@ -29,7 +29,7 @@ Scenes
     - good ending - Girl stays and you live happily ever after
       - mom comes back, choose between dog and cat, choose if you want to run love island
 
-Girls
+Girls/Inventory
  1. Lana - partying
  2. Suzie - playing soccer -
  3. Rudy - playing basketball - Notre Dame
